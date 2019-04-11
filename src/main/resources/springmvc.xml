@@ -3,11 +3,14 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:aop="http://www.springframework.org/schema/aop"
 	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
-		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
 
-    <context:component-scan base-package="com.ssm.*"></context:component-scan>
+    <context:component-scan base-package="com.ssm.controller"></context:component-scan>
      
      <!-- 定制，注入固定值解决重复编码问题//配置视图解析器 -->
      <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -33,12 +36,11 @@
     <!-- 统一异常处理 -->
     <bean class="com.ssm.exception.MyExceptionHandler"/>
     <!--上传组件支持 -->
-    <bean id="MultipartResolver"
-    	class="org.springframework.web.multipart.commons.CommonsMultipartResolver"
-    	p:defaultEncoding="UTF-8"
+    <bean id="MultipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+    	<!-- p:defaultEncoding="UTF-8"
     	P:maxUploadSize="5400000"
-    	P:uploadTempDir="fileUpload/temp"
-    >
+    	P:uploadTempDir="fileUpload/temp" -->
+    	<!-- maxUploadSize="5400000"; -->
     </bean>
     <!-- responsebody默认只返回普通字符串，如果希望返回自定义对象，导入jackson包 -->
     
