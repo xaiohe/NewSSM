@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+  
+  <settings>
+       <!-- 显示使用log4j2避免导入新的框架时，使用旧的日志组件 -->
+       <setting name="logImpl" value="LOG4J2"/>
+       <!-- 开启下划线到驼峰转换 -->
+       <setting name="mapUnderscoreToCamelCase" value="true"/>
+       <!-- 缓存全局开发 -->
+       <setting name="cacheEnabled" value="true"/>
+       <setting name="lazyLoadingEnabled" value="false"/>
+  </settings>
+  
+
+</configuration>
