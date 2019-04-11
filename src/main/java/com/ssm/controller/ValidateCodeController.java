@@ -1,11 +1,4 @@
-/**   
-* @Title: ValidateCodeController.java 
-* @Package com.ssm.controller 
-* @Description: TODO(用一句话描述该文件做什么) 
-* @author 徐文昌  
-* @date 2019年4月11日 下午1:54:47 
-* @version V1.0   
-*/
+
 package com.ssm.controller;
 
 import java.awt.Color;
